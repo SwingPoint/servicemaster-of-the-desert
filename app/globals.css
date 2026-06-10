@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #003da5;
+  --color-brand-blue-dark: #002d7a;
+  --color-brand-orange: #e87722;
+  --color-brand-orange-dark: #c9631a;
+  --color-brand-orange-light: #f5a623;
+  --color-brand-green: #2d8a4e;
+  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}

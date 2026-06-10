@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "servicemaster-of-the-desert",
+    "name": "ServiceMaster of the Desert",
+    "tagline": "The clean you expect, the service you deserve.",
+    "description": "With over 30 years of trusted service in the Coachella Valley, ServiceMaster of the Desert is your go-to for unparalleled cleanliness. Our dedicated team specializes in carpet, furniture, window, and floor cleaning services for residential and commercial clients.",
+    "category": "Professional cleaning services",
+    "schemaType": "ProfessionalService",
+    "url": "https://www.servicemasterofthedesert.com",
+    "telephone": "+1-442-227-3064",
+    "email": "info@servicemasterofthedesert.com",
+    "address": {
+      "streetAddress": "75091 St. Charles Place, Ste D",
+      "addressLocality": "Palm Desert",
+      "addressRegion": "CA",
+      "postalCode": "92211",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "latitude": 33.7455734,
+      "longitude": -116.3538624
+    },
+    "areaServed": [
+      "Palm Desert",
+      "Cathedral City",
+      "La Quinta",
+      "Indio",
+      "Thousand Palms",
+      "Palm Springs",
+      "Rancho Mirage",
+      "Bermuda Dunes",
+      "Desert Hot Springs",
+      "Coachella Valley"
+    ],
+    "foundingDate": "1989",
+    "owners": "Steve and Lesli Reiter",
+    "priceRange": "$$",
+    "mapUrl": "https://www.google.com/search?hl=en-US&gl=us&q=ServiceMaster+Of+The+Desert,+75091+St+Charles+Pl+Ste+D,+Palm+Desert,+CA+92211&ludocid=3791423070672400915&lsig=AB86z5WEEDC0QN8e32ehz6iFrchY#lrd=",
+    "googleMapsUrl": "https://www.google.com/maps/place/ServiceMaster+Of+The+Desert/@33.7455734,-116.3538624,17z/data=!3m1!4b1!4m6!3m5!1s0x80dafc251da8c92f:0x349dd731e8a63213!8m2!3d33.7455734!4d-116.3538624!16s%2Fg%2F1tffpmvm?entry=ttu",
+    "sameAs": [
+      "https://www.facebook.com/servicemaster.desert",
+      "https://www.yelp.com/biz/servicemaster-of-the-desert-palm-desert-9",
+      "https://www.servicemaster.com/",
+      "https://www.cvchamber.org/"
+    ],
+    "services": [
+      "Residential Carpet Cleaning",
+      "Commercial Carpet Cleaning",
+      "Tile and Grout Cleaning",
+      "Natural Stone Cleaning",
+      "Upholstery Cleaning",
+      "Window Cleaning",
+      "Pressure Washing"
+    ],
+    "images": {
+      "logo": "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f35985d3f2415a16ad2e44_servicemaster-logo.webp",
+      "hero": "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44d7eeb38050d0f7ecde8_professional-carpet-cleaning-palm-desert-p-1080.webp",
+      "van": "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f83bdd754def74795fb910_servicemaster-of-the-clean-van-p-1080.webp",
+      "owners": "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f3631ea3b9334e5b179ff5_steve-and-lesli-servicemaster.webp"
+    }
+  }
+]
