@@ -2,16 +2,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* ServiceMaster brand */
-  --color-brand-blue: #3d7dca;
-  --color-brand-blue-dark: #356eb5;
+  /* ServiceMaster teal (greenish-blue from approved site) */
+  --color-brand-blue: #09555f;
+  --color-brand-blue-dark: #074248;
+  --color-brand-blue-light: #0d7b8a;
   --color-brand-orange: #ef374d;
   --color-brand-orange-dark: #d6293f;
-  --color-brand-orange-light: #3d7dca;
-  --color-brand-green: #3d7dca;
+  --color-brand-orange-light: #fffcdb;
+  --color-brand-green: #0d7b8a;
   --color-charcoal: #1e293b;
   --color-warm-gray: #6b7280;
-  --color-desert-sand: #e9dfd1;
+  --color-desert-sand: #eae3d2;
   --color-off-white: #fafafa;
 
   --font-heading: "Montserrat", system-ui, sans-serif;
