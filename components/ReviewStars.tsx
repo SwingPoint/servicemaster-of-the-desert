@@ -1,7 +1,7 @@
-export default function ReviewStars({ className = "" }: { className?: string }) {
+﻿export default function ReviewStars({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`flex gap-0.5 text-brand-orange ${className}`}
+      className={`flex gap-0.5 text-[#F59E0B] ${className}`}
       aria-label="5 out of 5 stars"
       role="img"
     >

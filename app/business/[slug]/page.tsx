@@ -65,11 +65,11 @@ export default async function BusinessProfilePage({ params }: PageProps) {
             {" / "}
             Business Profile
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-slate-900">
+          <h1 className="mt-2 font-heading text-4xl font-bold text-charcoal">
             {business.name} — {business.address.addressLocality},{" "}
             {business.address.addressRegion}
           </h1>
-          <p className="mt-2 text-xl text-slate-600">{business.tagline}</p>
+          <p className="mt-2 text-xl text-warm-gray">{business.tagline}</p>
         </header>
 
         <div className="mb-10 flex justify-center">
@@ -84,34 +84,36 @@ export default async function BusinessProfilePage({ params }: PageProps) {
 
         <div className="grid gap-10 lg:grid-cols-2">
           <section aria-labelledby="nap-heading">
-            <h2 id="nap-heading" className="text-xl font-bold text-slate-900">
+            <h2 id="nap-heading" className="font-heading text-xl font-bold text-charcoal">
               Contact &amp; Location
             </h2>
             <NapBlock business={business} className="mt-4" />
           </section>
 
           <section aria-labelledby="about-heading">
-            <h2 id="about-heading" className="text-xl font-bold text-slate-900">
+            <h2 id="about-heading" className="font-heading text-xl font-bold text-charcoal">
               About
             </h2>
-            <p className="mt-4 leading-relaxed text-slate-600">{business.description}</p>
-            <p className="mt-4 text-slate-600">
-              <strong>Owners:</strong> {business.owners} (since {business.foundingDate})
+            <p className="mt-4 leading-relaxed text-warm-gray">{business.description}</p>
+            <p className="mt-4 text-warm-gray">
+              <strong className="text-charcoal">Owners:</strong> {business.owners} (since{" "}
+              {business.foundingDate})
             </p>
-            <p className="mt-4 text-slate-600">
-              <strong>Areas served:</strong> {business.areaServed.join(", ")}
+            <p className="mt-4 text-warm-gray">
+              <strong className="text-charcoal">Areas served:</strong>{" "}
+              {business.areaServed.join(", ")}
             </p>
           </section>
         </div>
 
         <section className="mt-10" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-xl font-bold text-slate-900">
+          <h2 id="services-heading" className="font-heading text-xl font-bold text-charcoal">
             Services
           </h2>
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {business.services.map((service) => (
-              <li key={service} className="flex gap-2 text-slate-700">
-                <span className="text-brand-green" aria-hidden="true">
+              <li key={service} className="flex gap-2 text-warm-gray">
+                <span className="font-bold text-brand-blue" aria-hidden="true">
                   ✓
                 </span>
                 {service}
@@ -121,14 +123,17 @@ export default async function BusinessProfilePage({ params }: PageProps) {
         </section>
 
         <section className="mt-10" aria-labelledby="faq-heading">
-          <h2 id="faq-heading" className="text-xl font-bold text-slate-900">
+          <h2 id="faq-heading" className="font-heading text-xl font-bold text-charcoal">
             Frequently Asked Questions
           </h2>
           <dl className="mt-4 space-y-4">
             {profileFaqs.map((faq) => (
-              <div key={faq.question} className="rounded-lg border border-slate-200 p-4">
-                <dt className="font-semibold text-slate-900">{faq.question}</dt>
-                <dd className="mt-2 text-slate-600">{faq.answer}</dd>
+              <div
+                key={faq.question}
+                className="rounded-[12px] border border-desert-sand bg-white p-4"
+              >
+                <dt className="font-semibold text-charcoal">{faq.question}</dt>
+                <dd className="mt-2 text-warm-gray">{faq.answer}</dd>
               </div>
             ))}
           </dl>
@@ -140,7 +145,7 @@ export default async function BusinessProfilePage({ params }: PageProps) {
         </section>
 
         <section className="mt-10" aria-labelledby="authority-heading">
-          <h2 id="authority-heading" className="text-xl font-bold text-slate-900">
+          <h2 id="authority-heading" className="font-heading text-xl font-bold text-charcoal">
             Trusted resources
           </h2>
           <ul className="mt-3 space-y-2">
@@ -160,10 +165,7 @@ export default async function BusinessProfilePage({ params }: PageProps) {
         </section>
 
         <div className="mt-10 text-center">
-          <a
-            href={PHONE_LINK}
-            className="inline-block rounded-full bg-brand-orange px-8 py-3 font-semibold text-white hover:bg-brand-orange-dark"
-          >
+          <a href={PHONE_LINK} className="btn-primary inline-block px-8 py-3">
             Schedule Service — (442) 227-3064
           </a>
         </div>

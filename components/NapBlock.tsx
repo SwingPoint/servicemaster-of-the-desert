@@ -1,4 +1,4 @@
-import type { Business } from "@/data/content";
+﻿import type { Business } from "@/data/content";
 import { PHONE, PHONE_LINK } from "@/data/content";
 
 type NapBlockProps = {
@@ -15,10 +15,8 @@ export default function NapBlock({
   const { address } = business;
 
   return (
-    <address
-      className={`not-italic text-sm leading-relaxed text-slate-700 ${className}`}
-    >
-      <strong className="block text-base text-slate-900">{business.name}</strong>
+    <address className={`not-italic text-sm leading-relaxed text-warm-gray ${className}`}>
+      <strong className="block text-base text-charcoal">{business.name}</strong>
       <span className="block">
         {address.streetAddress}
         <br />

@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import ReviewStars from "@/components/ReviewStars";
@@ -39,10 +39,10 @@ export default function HomePage() {
             <h1 className="text-4xl font-bold leading-tight lg:text-5xl">
               Professional Carpet Cleaning in Palm Desert, CA
             </h1>
-            <p className="mt-4 text-xl text-blue-100">
+            <p className="mt-4 text-xl text-white/90">
               The clean you expect, the service you deserve.
             </p>
-            <p className="mt-4 leading-relaxed text-blue-50">
+            <p className="mt-4 leading-relaxed text-white/80">
               With over 30 years of trusted service in the Coachella Valley,
               ServiceMaster of the Desert is your go-to for unparalleled
               cleanliness. Our dedicated team specializes in carpet, furniture,
@@ -51,7 +51,7 @@ export default function HomePage() {
             </p>
             <a
               href={PHONE_LINK}
-              className="mt-8 inline-block rounded-full bg-brand-orange px-8 py-3 text-lg font-semibold text-white hover:bg-brand-orange-dark"
+              className="btn-primary mt-8 px-8 py-3 text-lg"
             >
               Clean My Space
             </a>
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Hero testimonials */}
-      <section className="bg-slate-50 py-12" id="reviews">
+      <section className="bg-off-white py-12" id="reviews">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-3 lg:px-6">
           {heroTestimonials.map((t) => (
             <TestimonialCard key={t.author} testimonial={t} />
@@ -81,10 +81,10 @@ export default function HomePage() {
       {/* Trust section */}
       <section className="py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 lg:px-6">
-          <h2 className="text-center text-3xl font-bold text-slate-900 lg:text-4xl">
+          <h2 className="text-center text-3xl font-bold text-charcoal lg:text-4xl">
             Your dependable Palm Desert cleaners.
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-slate-600">
+          <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-warm-gray">
             At ServiceMaster of the Desert, we&apos;re committed to ensuring both
             your home and business look their best. With{" "}
             <strong>over three decades of experience</strong>, our professional
@@ -97,11 +97,11 @@ export default function HomePage() {
             {TRUST_POINTS.map((point) => (
               <article
                 key={point.title}
-                className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm"
+                className="rounded-xl border border-desert-sand bg-white p-6 text-center shadow-sm"
               >
                 <ReviewStars className="mb-4 justify-center" />
-                <h3 className="text-lg font-bold text-slate-900">{point.title}</h3>
-                <p className="mt-3 text-slate-600">{point.description}</p>
+                <h3 className="text-lg font-bold text-charcoal">{point.title}</h3>
+                <p className="mt-3 text-warm-gray">{point.description}</p>
               </article>
             ))}
           </div>
@@ -109,9 +109,9 @@ export default function HomePage() {
       </section>
 
       {/* Service cards */}
-      <section id="services" className="scroll-mt-24 bg-slate-50 py-16">
+      <section id="services" className="scroll-mt-24 bg-off-white py-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-6">
-          <h2 className="text-center text-3xl font-bold text-slate-900">
+          <h2 className="text-center text-3xl font-bold text-charcoal">
             How can we help?
           </h2>
           <nav
@@ -122,12 +122,12 @@ export default function HomePage() {
               <Link
                 key={card.label}
                 href={card.href}
-                className="flex flex-col items-center rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:border-brand-blue hover:shadow-md"
+                className="flex flex-col items-center rounded-xl border border-desert-sand bg-white p-6 text-center shadow-sm transition hover:border-brand-blue hover:shadow-md"
               >
                 <span className="text-3xl" aria-hidden="true">
                   {card.icon}
                 </span>
-                <span className="mt-3 font-semibold text-slate-900">{card.label}</span>
+                <span className="mt-3 font-semibold text-charcoal">{card.label}</span>
               </Link>
             ))}
           </nav>
@@ -176,7 +176,7 @@ export default function HomePage() {
       />
 
       {/* Client logos */}
-      <section className="border-y border-slate-200 bg-white py-10">
+      <section className="border-y border-desert-sand bg-white py-10">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-4 lg:px-6">
           {[
             { src: IMAGES.thermalClub, alt: "The Thermal Club logo" },
@@ -196,12 +196,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-12">
+      <section className="bg-off-white py-12">
         <div className="mx-auto max-w-xl px-4">
           <TestimonialCard testimonial={TESTIMONIALS[3]} />
           <p className="mt-6 text-center">
             <Link href="/#reviews" className="font-semibold text-brand-blue hover:underline">
-              Read More Reviews →
+              Read More Reviews ΓåÆ
             </Link>
           </p>
         </div>
@@ -250,7 +250,7 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="bg-slate-50 py-12">
+      <section className="bg-off-white py-12">
         <div className="mx-auto max-w-xl px-4">
           <TestimonialCard testimonial={TESTIMONIALS[4]} />
         </div>
@@ -282,7 +282,7 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="bg-slate-50 py-12">
+      <section className="bg-off-white py-12">
         <div className="mx-auto max-w-xl px-4">
           <TestimonialCard testimonial={TESTIMONIALS[5]} />
         </div>
@@ -328,7 +328,7 @@ export default function HomePage() {
         ]}
       />
 
-      <section className="bg-slate-50 py-12">
+      <section className="bg-off-white py-12">
         <div className="mx-auto max-w-xl px-4">
           <TestimonialCard testimonial={TESTIMONIALS[6]} />
         </div>
@@ -341,7 +341,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold lg:text-4xl">
               The carpet cleaner you can trust.
             </h2>
-            <p className="mt-4 text-lg text-blue-100">
+            <p className="mt-4 text-lg text-white/85">
               From spotless floors and furniture with our carpet and upholstery
               cleaning to gleaming windows with professional window cleaning, let
               ServiceMaster of the Desert elevate your home or business
@@ -350,19 +350,19 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href={PHONE_LINK}
-                className="rounded-full bg-brand-orange px-8 py-3 font-semibold text-white hover:bg-brand-orange-dark"
+                className="btn-primary px-8 py-3"
               >
                 Get Started
               </a>
               <Link
                 href="/faq"
-                className="rounded-full border border-white px-8 py-3 font-semibold hover:bg-white/10"
+                className="rounded-[10px] border border-white px-8 py-3 font-semibold hover:bg-white/10"
               >
                 View FAQs
               </Link>
               <Link
                 href={`/business/${business.slug}`}
-                className="rounded-full border border-white px-8 py-3 font-semibold hover:bg-white/10"
+                className="rounded-[10px] border border-white px-8 py-3 font-semibold hover:bg-white/10"
               >
                 Business Profile
               </Link>

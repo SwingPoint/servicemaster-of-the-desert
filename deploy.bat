@@ -26,15 +26,8 @@ echo   https://github.com/new
 echo   Name: servicemaster-of-the-desert
 echo   Do NOT add README, .gitignore, or license.
 echo.
-set /p GHUSER=Enter your GitHub username: 
-if "%GHUSER%"=="" (
-  echo GitHub username required.
-  pause
-  exit /b 1
-)
-
 "%GIT%" remote remove origin 2>nul
-"%GIT%" remote add origin https://github.com/%GHUSER%/servicemaster-of-the-desert.git
+"%GIT%" remote add origin https://github.com/SwingPoint/servicemaster-of-the-desert.git
 "%GIT%" branch -M main
 "%GIT%" push -u origin main
 if errorlevel 1 (

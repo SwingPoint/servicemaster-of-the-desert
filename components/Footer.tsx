@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import NapBlock from "@/components/NapBlock";
 import {
   AUTHORITY_LINKS,
@@ -13,7 +13,7 @@ export default function Footer() {
   const business = getPrimaryBusiness();
 
   return (
-    <footer id="contact" className="bg-slate-900 text-slate-300">
+    <footer id="contact" className="bg-charcoal text-white/75">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-6">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/servicemaster.desert"
-                className="rounded bg-slate-800 px-3 py-1 text-sm hover:bg-slate-700"
+                className="rounded-[10px] bg-white/10 px-3 py-1 text-sm hover:bg-white/20"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -77,11 +77,14 @@ export default function Footer() {
 
           <div>
             <h2 className="mb-4 text-lg font-semibold text-white">Contact</h2>
-            <NapBlock business={business} className="text-slate-300 [&_strong]:text-white [&_a]:text-brand-orange-light" />
+            <NapBlock
+              business={business}
+              className="text-white/75 [&_a]:text-desert-sand [&_a:hover]:text-white [&_strong]:text-white"
+            />
           </div>
         </div>
 
-        <div className="mt-10 border-t border-slate-800 pt-8">
+        <div className="mt-10 border-t border-white/10 pt-8">
           <h3 className="mb-3 text-sm font-semibold text-white">Trusted resources</h3>
           <ul className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
             {AUTHORITY_LINKS.map((link) => (
@@ -99,10 +102,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="mt-8 flex flex-col gap-2 border-t border-slate-800 pt-6 text-xs text-slate-500 sm:flex-row sm:justify-between">
+        <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:justify-between">
           <p>Copyright © {new Date().getFullYear()} ServiceMaster of the Desert</p>
           <p>
-            <a href={SITE_URL} className="hover:text-slate-300">
+            <a href={SITE_URL} className="hover:text-white/75">
               {SITE_URL.replace("https://", "")}
             </a>
           </p>

@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-brand-blue: #003da5;
-  --color-brand-blue-dark: #002d7a;
-  --color-brand-orange: #e87722;
-  --color-brand-orange-dark: #c9631a;
-  --color-brand-orange-light: #f5a623;
-  --color-brand-green: #2d8a4e;
-  --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* ServiceMaster brand */
+  --color-brand-blue: #3d7dca;
+  --color-brand-blue-dark: #356eb5;
+  --color-brand-orange: #ef374d;
+  --color-brand-orange-dark: #d6293f;
+  --color-brand-orange-light: #3d7dca;
+  --color-brand-green: #3d7dca;
+  --color-charcoal: #1e293b;
+  --color-warm-gray: #6b7280;
+  --color-desert-sand: #e9dfd1;
+  --color-off-white: #fafafa;
+
+  --font-heading: "Montserrat", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 }
 
 html {
@@ -15,5 +23,22 @@ html {
 }
 
 body {
-  @apply bg-white text-slate-900 antialiased;
+  @apply bg-off-white font-body text-charcoal antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-[10px] bg-brand-orange px-6 py-3 font-semibold text-white transition hover:bg-brand-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-[10px] bg-brand-blue px-6 py-3 font-semibold text-white transition hover:bg-brand-blue-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue;
 }
