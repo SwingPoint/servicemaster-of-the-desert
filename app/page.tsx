@@ -60,7 +60,7 @@ export default function HomePage() {
             <div className="aspect-square overflow-hidden rounded-full shadow-xl">
               <Image
                 src={IMAGES.heroTruck}
-                alt="ServiceMaster of the Desert truck at a Palm Desert residence"
+                alt="ServiceMaster Clean van parked at a Coachella Valley residence"
                 width={1080}
                 height={1080}
                 priority

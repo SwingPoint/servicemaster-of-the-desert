@@ -23,7 +23,7 @@ export const PHONE_LINK = "tel:+14422273064";
 export const IMAGES = {
   logo: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f35985d3f2415a16ad2e44_servicemaster-logo.webp",
   hero: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44d7eeb38050d0f7ecde8_professional-carpet-cleaning-palm-desert-p-1080.webp",
-  heroTruck: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/664ceefcd137839e87942b31_sm_customer_no-we_serve-p-1080.webp",
+  heroTruck: "/images/hero-van.png",
   residentialCarpet: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896521834bc915131795_gekko%20tool-p-800.webp",
   commercialCarpet: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44e053add29cae90a79d2_commercial-carpets-after-cleaning-palm-desert-p-800.webp",
   tileGrout: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
@@ -32,7 +32,7 @@ export const IMAGES = {
   window: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896569ce5c2dce6d3a01_window%20clean%20squegee.webp",
   pressure: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f45fe40256421dc0535f4a_pressure-washing-p-800.webp",
   solar: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f45fe40256421dc0535f4a_pressure-washing-p-1080.webp",
-  van: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f83bdd754def74795fb910_servicemaster-of-the-clean-van-p-1080.webp",
+  van: "/images/hero-van.png",
   owners: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f3631ea3b9334e5b179ff5_steve-and-lesli-servicemaster.webp",
   thermalClub: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f463d54acc8a860c6ee387_thermal-club-logo.webp",
   southwestChurch: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f463bc56efeb2c02a7c481_southwest-church-logo.webp",

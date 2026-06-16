@@ -6,19 +6,19 @@ import { IMAGES, NAV_LINKS, PHONE, PHONE_LINK, SERVICE_LINKS } from "@/data/cont
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-desert-sand bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 lg:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 lg:px-8 lg:py-5">
         <Link href="/" className="shrink-0">
           <Image
             src={IMAGES.logo}
             alt="ServiceMaster of the Desert logo"
-            width={180}
-            height={48}
+            width={200}
+            height={56}
             priority
-            className="h-10 w-auto lg:h-12"
+            className="h-12 w-auto lg:h-14"
           />
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-6 xl:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-7 xl:flex">
           <div className="group relative">
             <span className="cursor-default font-medium text-charcoal">Our Services</span>
             <div className="invisible absolute left-0 top-full z-50 min-w-[220px] rounded-[12px] border border-desert-sand bg-white py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
@@ -51,7 +51,7 @@ export default function Header() {
           >
             {PHONE}
           </a>
-          <BookNowButton className="btn-primary px-4 py-2 text-sm">
+          <BookNowButton className="btn-primary px-5 py-2.5 text-sm lg:px-6 lg:py-3">
             Book Now
           </BookNowButton>
 
