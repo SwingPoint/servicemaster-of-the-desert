@@ -11,10 +11,10 @@ export default function Header() {
           <Image
             src={IMAGES.logo}
             alt="ServiceMaster of the Desert logo"
-            width={200}
-            height={56}
+            width={260}
+            height={72}
             priority
-            className="h-12 w-auto lg:h-14"
+            className="h-14 w-auto lg:h-16 xl:h-[4.75rem]"
           />
         </Link>
 
