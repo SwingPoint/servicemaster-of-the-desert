@@ -37,7 +37,7 @@ h6 {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-[10px] bg-brand-orange px-6 py-3 font-semibold text-white transition hover:bg-brand-orange-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-orange;
+  @apply inline-flex items-center justify-center rounded-[10px] bg-brand-blue px-6 py-3 font-semibold text-white no-underline transition hover:bg-brand-blue-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue;
 }
 
 .btn-secondary {
