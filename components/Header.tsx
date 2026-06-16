@@ -18,9 +18,11 @@ export default function Header() {
           />
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-7 xl:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-8 xl:flex">
           <div className="group relative">
-            <span className="cursor-default font-medium text-charcoal">Our Services</span>
+            <span className="cursor-default text-lg font-semibold text-charcoal xl:text-xl">
+              Our Services
+            </span>
             <div className="invisible absolute left-0 top-full z-50 min-w-[220px] rounded-[12px] border border-desert-sand bg-white py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100">
               {SERVICE_LINKS.map((link) => (
                 <Link
@@ -37,7 +39,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-medium text-charcoal hover:text-brand-blue"
+              className="text-lg font-semibold text-charcoal hover:text-brand-blue xl:text-xl"
             >
               {link.label}
             </Link>
@@ -47,11 +49,11 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <a
             href={PHONE_LINK}
-            className="hidden text-sm font-semibold text-brand-blue sm:inline"
+            className="hidden text-lg font-semibold text-brand-blue sm:inline xl:text-xl"
           >
             {PHONE}
           </a>
-          <BookNowButton className="btn-primary px-5 py-2.5 text-sm lg:px-6 lg:py-3">
+          <BookNowButton className="btn-primary px-6 py-3 text-lg xl:px-7 xl:py-3.5 xl:text-xl">
             Book Now
           </BookNowButton>
 
