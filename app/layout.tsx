@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HousecallProChat from "@/components/HousecallProChat";
+import HousecallProBookingScript from "@/components/HousecallProBookingScript";
 import JsonLd from "@/components/JsonLd";
 import { getPrimaryBusiness, SITE_URL } from "@/data/content";
 import { buildWebSiteJsonLd } from "@/lib/schema";
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1">{children}</main>
         <Footer />
         <HousecallProChat />
+        <HousecallProBookingScript />
       </body>
     </html>
   );

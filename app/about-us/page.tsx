@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import BookNowButton from "@/components/BookNowButton";
 import JsonLd from "@/components/JsonLd";
 import {
   AUTHORITY_LINKS,
@@ -105,12 +106,15 @@ export default function AboutPage() {
         </section>
 
         <div className="mt-10 text-center">
-          <a
-            href={PHONE_LINK}
-            className="btn-primary inline-block px-8 py-3"
-          >
-            Book Online ΓÇö Call (442) 227-3064
-          </a>
+          <BookNowButton className="btn-primary inline-block px-8 py-3">
+            Book Online
+          </BookNowButton>
+          <p className="mt-3 text-sm text-warm-gray">
+            Or call{" "}
+            <a href={PHONE_LINK} className="font-semibold text-brand-blue hover:underline">
+              (442) 227-3064
+            </a>
+          </p>
         </div>
       </article>
     </>

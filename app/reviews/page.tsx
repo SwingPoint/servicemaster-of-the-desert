@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import BookNowLink from "@/components/BookNowLink";
+import BookNowButton from "@/components/BookNowButton";
 import HousecallProReviews from "@/components/HousecallProReviews";
 import FacebookTrust from "@/components/FacebookTrust";
 import { HOUSECALL_PRO } from "@/data/integrations";
@@ -39,7 +39,7 @@ export default function ReviewsPage() {
       <HousecallProReviews />
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <BookNowLink className="btn-primary px-8 py-3">Book Online</BookNowLink>
+        <BookNowButton className="btn-primary px-8 py-3">Book Online</BookNowButton>
         <a
           href={HOUSECALL_PRO.reviewsPageUrl}
           target="_blank"

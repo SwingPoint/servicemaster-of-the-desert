@@ -1,5 +1,5 @@
 ﻿import Image from "next/image";
-import Link from "next/link";
+import BookNowButton from "@/components/BookNowButton";
 
 type ServiceBlockProps = {
   id: string;
@@ -11,7 +11,6 @@ type ServiceBlockProps = {
     body: string;
     steps: string[];
     cta: string;
-    ctaHref: string;
     image: string;
     imageAlt: string;
     imageLeft?: boolean;
@@ -52,9 +51,7 @@ export default function ServiceBlock({ id, title, intro, items }: ServiceBlockPr
                     </li>
                   ))}
                 </ul>
-                <Link href={item.ctaHref} className="btn-primary mt-6 inline-block">
-                  {item.cta}
-                </Link>
+                <BookNowButton className="btn-primary mt-6">{item.cta}</BookNowButton>
               </div>
               <div className={item.imageLeft ? "lg:order-1" : ""}>
                 <Image

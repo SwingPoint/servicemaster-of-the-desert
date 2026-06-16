@@ -1,6 +1,6 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import BookNowLink from "@/components/BookNowLink";
+import BookNowButton from "@/components/BookNowButton";
 import FacebookTrust from "@/components/FacebookTrust";
 import JsonLd from "@/components/JsonLd";
 import ReviewStars from "@/components/ReviewStars";
@@ -10,7 +10,6 @@ import {
   GALLERY_ITEMS,
   getPrimaryBusiness,
   IMAGES,
-  PHONE_LINK,
   SITE_URL,
   TESTIMONIALS,
   TRUST_POINTS,
@@ -53,12 +52,9 @@ export default function HomePage() {
               window, and floor cleaning services, ensuring your space is not
               only clean but also comfortable.
             </p>
-            <a
-              href={PHONE_LINK}
-              className="btn-primary mt-8 px-8 py-3 text-lg"
-            >
+            <BookNowButton className="btn-primary mt-8 px-8 py-3 text-lg">
               Clean My Space
-            </a>
+            </BookNowButton>
           </div>
           <div className="mx-auto w-full max-w-md lg:max-w-none">
             <div className="aspect-square overflow-hidden rounded-full shadow-xl">
@@ -172,7 +168,6 @@ export default function HomePage() {
               "Move/replace casual furniture.",
             ],
             cta: "Transform My Carpets",
-            ctaHref: PHONE_LINK,
             image: IMAGES.residentialCarpet,
             imageAlt: "Carpet cleaning wand with ServiceMaster of the Desert logo",
           },
@@ -185,7 +180,6 @@ export default function HomePage() {
               "A quick drying process to minimize disruption to your business operations.",
             ],
             cta: "Clean My Carpets",
-            ctaHref: PHONE_LINK,
             image: IMAGES.commercialCarpet,
             imageAlt: "Commercial carpets after cleaning in Palm Desert, CA",
             imageLeft: true,
@@ -243,7 +237,6 @@ export default function HomePage() {
               "Move and replace all furnishings.",
             ],
             cta: "Refresh My Tiles",
-            ctaHref: PHONE_LINK,
             image: IMAGES.tileGrout,
             imageAlt: "Residential tile cleaning in Palm Desert, CA",
           },
@@ -260,7 +253,6 @@ export default function HomePage() {
               "Move and replace all furnishings.",
             ],
             cta: "Restore My Natural Stone",
-            ctaHref: PHONE_LINK,
             image: IMAGES.naturalStone,
             imageAlt: "Residential natural stone floor cleaning in Palm Desert, CA",
             imageLeft: true,
@@ -293,7 +285,6 @@ export default function HomePage() {
               "Apply protectant to seal fibers.",
             ],
             cta: "Clean My Upholstery",
-            ctaHref: PHONE_LINK,
             image: IMAGES.upholstery,
             imageAlt: "Professional upholstery cleaning in progress",
           },
@@ -324,7 +315,6 @@ export default function HomePage() {
               "Squeegee interior glass and vacuum tracks.",
             ],
             cta: "Let The Light In",
-            ctaHref: PHONE_LINK,
             image: IMAGES.window,
             imageAlt: "Professional window cleaning in Palm Desert, CA",
           },
@@ -337,7 +327,6 @@ export default function HomePage() {
               "Restore curb appeal to patios, driveways, and stucco.",
             ],
             cta: "Boost My Curb Appeal",
-            ctaHref: PHONE_LINK,
             image: IMAGES.pressure,
             imageAlt: "Professional pressure washing a driveway in Palm Desert",
             imageLeft: true,
@@ -362,7 +351,6 @@ export default function HomePage() {
               "Help maintain long-term system efficiency.",
             ],
             cta: "Boost My Solar Efficiency",
-            ctaHref: PHONE_LINK,
             image: IMAGES.solar,
             imageAlt: "Solar panel cleaning service in Palm Desert, CA",
           },
@@ -426,9 +414,9 @@ export default function HomePage() {
               environment with unparalleled cleaning services.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <BookNowLink className="btn-primary px-8 py-3">
+              <BookNowButton className="btn-primary px-8 py-3">
                 Get Started
-              </BookNowLink>
+              </BookNowButton>
               <Link
                 href="/faq"
                 className="rounded-[10px] border border-white px-8 py-3 font-semibold hover:bg-white/10"

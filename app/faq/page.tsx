@@ -2,7 +2,7 @@
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import FaqAccordion from "@/components/FaqAccordion";
-import BookNowLink from "@/components/BookNowLink";
+import BookNowButton from "@/components/BookNowButton";
 import { FAQS, SITE_URL } from "@/data/content";
 import { buildFaqPageJsonLd } from "@/lib/schema";
 
@@ -79,7 +79,7 @@ export default function FaqPage() {
             Book online or call ServiceMaster of the Desert for a free estimate.
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-4">
-            <BookNowLink className="btn-primary px-8 py-3">Book Online</BookNowLink>
+            <BookNowButton className="btn-primary px-8 py-3">Book Online</BookNowButton>
             <a href="tel:+14422273064" className="rounded-[10px] border border-white px-8 py-3 font-semibold hover:bg-white/10">
               Call (442) 227-3064
             </a>

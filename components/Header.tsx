@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import Image from "next/image";
-import BookNowLink from "@/components/BookNowLink";
+import BookNowButton from "@/components/BookNowButton";
 import { IMAGES, NAV_LINKS, PHONE, PHONE_LINK, SERVICE_LINKS } from "@/data/content";
 
 export default function Header() {
@@ -51,9 +51,9 @@ export default function Header() {
           >
             {PHONE}
           </a>
-          <BookNowLink className="btn-primary px-4 py-2 text-sm">
+          <BookNowButton className="btn-primary px-4 py-2 text-sm">
             Book Now
-          </BookNowLink>
+          </BookNowButton>
 
           <details className="relative xl:hidden">
             <summary className="cursor-pointer list-none rounded-[10px] border border-desert-sand px-3 py-2 text-sm font-medium text-charcoal [&::-webkit-details-marker]:hidden">
@@ -92,9 +92,9 @@ export default function Header() {
               >
                 Business Profile
               </Link>
-              <BookNowLink className="block px-4 py-2 text-sm font-semibold text-brand-blue">
+              <BookNowButton className="block w-full px-4 py-2 text-left text-sm font-semibold text-brand-blue">
                 Book Online
-              </BookNowLink>
+              </BookNowButton>
               <a
                 href={PHONE_LINK}
                 className="block px-4 py-2 text-sm font-semibold text-brand-blue"

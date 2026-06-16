@@ -1,8 +1,10 @@
 export const HOUSECALL_PRO = {
   organizationId: "c4745eae-d663-4d5a-abfa-96d15ec60fb5",
   chatColor: "#09555f",
-  bookingUrl:
-    "https://book.housecallpro.com/organizations/c4745eae-d663-4d5a-abfa-96d15ec60fb5",
+  bookingToken: "4956067853164cf8a0448bf31f3b23ca",
+  bookingOrgName: "ServiceMaster-of-the-Desert",
+  bookingScriptUrl:
+    "https://online-booking.housecallpro.com/script.js?token=4956067853164cf8a0448bf31f3b23ca&orgName=ServiceMaster-of-the-Desert",
   reviewsWidgetUrl:
     "https://client.housecallpro.com/reviews/widget/c4745eae-d663-4d5a-abfa-96d15ec60fb5",
   reviewsPageUrl:

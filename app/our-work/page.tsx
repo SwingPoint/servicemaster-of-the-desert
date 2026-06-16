@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import BookNowLink from "@/components/BookNowLink";
+import BookNowButton from "@/components/BookNowButton";
 import WorkGallery from "@/components/WorkGallery";
 import { GALLERY_ITEMS, SITE_URL } from "@/data/content";
 
@@ -39,9 +39,9 @@ export default function OurWorkPage() {
       <WorkGallery items={GALLERY_ITEMS} />
 
       <section className="mt-12 text-center">
-        <BookNowLink className="btn-primary inline-block px-8 py-3">
+        <BookNowButton className="btn-primary inline-block px-8 py-3">
           Book Online
-        </BookNowLink>
+        </BookNowButton>
       </section>
     </article>
   );
