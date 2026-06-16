@@ -25,6 +25,8 @@ export const IMAGES = {
   hero: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44d7eeb38050d0f7ecde8_professional-carpet-cleaning-palm-desert-p-1080.webp",
   heroTruck: "/images/hero-van.png",
   residentialCarpet: "/images/residential-carpet.png",
+  truckMountedTile:
+    "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896521834bc915131795_gekko%20tool-p-800.webp",
   commercialCarpet: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44e053add29cae90a79d2_commercial-carpets-after-cleaning-palm-desert-p-800.webp",
   tileGrout: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
   naturalStone: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
@@ -114,10 +116,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     alt: "Professional carpet cleaning in a Palm Desert home",
   },
   {
-    title: "Truck-mounted carpet cleaning",
+    title: "Truck-mounted tile cleaning",
     category: "Carpet",
-    image: IMAGES.residentialCarpet,
-    alt: "Freshly cleaned residential carpet in a Coachella Valley home",
+    image: IMAGES.truckMountedTile,
+    alt: "Truck-mounted tile cleaning equipment in use",
   },
   {
     title: "Commercial carpet care",
