@@ -1,10 +1,13 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
+import BookNowLink from "@/components/BookNowLink";
+import FacebookTrust from "@/components/FacebookTrust";
 import JsonLd from "@/components/JsonLd";
 import ReviewStars from "@/components/ReviewStars";
 import ServiceBlock from "@/components/ServiceBlock";
 import TestimonialCard from "@/components/TestimonialCard";
 import {
+  GALLERY_ITEMS,
   getPrimaryBusiness,
   IMAGES,
   PHONE_LINK,
@@ -22,6 +25,7 @@ const serviceCards = [
   { label: "Natural Stone Cleaning", href: "#tile-stone", icon: "◆" },
   { label: "Upholstery Cleaning", href: "#upholstery", icon: "🛋" },
   { label: "Window and Exterior Cleaning", href: "#exterior", icon: "🪟" },
+  { label: "Solar Panel Cleaning", href: "#solar-cleaning", icon: "☀️" },
 ];
 
 export default function HomePage() {
@@ -83,6 +87,11 @@ export default function HomePage() {
               {TESTIMONIALS[0].author}, via {TESTIMONIALS[0].source}
             </footer>
           </blockquote>
+          <p className="mt-6">
+            <Link href="/reviews" className="font-semibold text-white hover:underline">
+              Read more reviews →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -113,6 +122,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+          <FacebookTrust className="mx-auto mt-10 max-w-xl" />
         </div>
       </section>
 
@@ -124,7 +134,7 @@ export default function HomePage() {
           </h2>
           <nav
             aria-label="Service categories"
-            className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5"
+            className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
           >
             {serviceCards.map((card) => (
               <Link
@@ -320,12 +330,11 @@ export default function HomePage() {
           },
           {
             heading: "Pressure Washing",
-            body: "Our desert environment can be harsh. Contact ServiceMaster of the Desert and give it a refresh with our pressure washing service. We can pressure wash stucco, patios, and driveways. We also clean solar panels.",
+            body: "Our desert environment can be harsh. Contact ServiceMaster of the Desert and give it a refresh with our pressure washing service. We can pressure wash stucco, patios, and driveways.",
             steps: [
               "Evaluate surfaces and select appropriate pressure settings.",
               "Remove built-up dirt, sediment, and debris.",
               "Restore curb appeal to patios, driveways, and stucco.",
-              "Clean solar panels to maintain system efficiency.",
             ],
             cta: "Boost My Curb Appeal",
             ctaHref: PHONE_LINK,
@@ -336,9 +345,70 @@ export default function HomePage() {
         ]}
       />
 
+      {/* Solar panel cleaning */}
+      <ServiceBlock
+        id="solar-cleaning"
+        title="Solar Panel Cleaning"
+        intro="Desert dust and debris reduce solar efficiency over time. ServiceMaster of the Desert safely cleans residential and commercial solar arrays to help your system perform at its best."
+        items={[
+          {
+            heading: "Professional Solar Panel Cleaning",
+            body: "Our team uses purified water and appropriate pressure methods designed for solar panels. We remove buildup that blocks sunlight without damaging panels, frames, or roof surfaces.",
+            steps: [
+              "Inspect roof access and panel condition.",
+              "Remove loose dust and debris safely.",
+              "Clean panels with purified water methods.",
+              "Rinse and verify a streak-free finish.",
+              "Help maintain long-term system efficiency.",
+            ],
+            cta: "Boost My Solar Efficiency",
+            ctaHref: PHONE_LINK,
+            image: IMAGES.solar,
+            imageAlt: "Solar panel cleaning service in Palm Desert, CA",
+          },
+        ]}
+      />
+
       <section className="bg-off-white py-12">
         <div className="mx-auto max-w-xl px-4">
           <TestimonialCard testimonial={TESTIMONIALS[6]} />
+        </div>
+      </section>
+
+      {/* Our Work preview */}
+      <section className="border-y border-desert-sand bg-white py-16">
+        <div className="mx-auto max-w-7xl px-4 lg:px-6">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-charcoal">Our Work</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-warm-gray">
+              See recent carpet, tile, upholstery, exterior, and solar cleaning
+              results across the Coachella Valley.
+            </p>
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {GALLERY_ITEMS.slice(0, 4).map((item) => (
+              <li
+                key={item.title}
+                className="overflow-hidden rounded-[12px] border border-desert-sand bg-off-white"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="p-3 text-sm font-semibold text-charcoal">{item.title}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-center">
+            <Link href="/our-work" className="font-semibold text-brand-blue hover:underline">
+              View full project gallery →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -356,12 +426,9 @@ export default function HomePage() {
               environment with unparalleled cleaning services.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href={PHONE_LINK}
-                className="btn-primary px-8 py-3"
-              >
+              <BookNowLink className="btn-primary px-8 py-3">
                 Get Started
-              </a>
+              </BookNowLink>
               <Link
                 href="/faq"
                 className="rounded-[10px] border border-white px-8 py-3 font-semibold hover:bg-white/10"
@@ -389,6 +456,8 @@ export default function HomePage() {
       {/* Hidden crawlable links for AIO */}
       <nav aria-label="Site pages" className="sr-only">
         <Link href="/faq">Frequently Asked Questions</Link>
+        <Link href="/our-work">Our Work gallery</Link>
+        <Link href="/reviews">Customer reviews</Link>
         <Link href="/about-us">About ServiceMaster of the Desert</Link>
         <Link href={`/business/${business.slug}`}>Business profile and NAP</Link>
         <a href={SITE_URL}>{business.name}</a>

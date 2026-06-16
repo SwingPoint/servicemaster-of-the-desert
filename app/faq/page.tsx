@@ -1,13 +1,15 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
-import { FAQS, PHONE_LINK, SITE_URL } from "@/data/content";
+import FaqAccordion from "@/components/FaqAccordion";
+import BookNowLink from "@/components/BookNowLink";
+import { FAQS, SITE_URL } from "@/data/content";
 import { buildFaqPageJsonLd } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about carpet, tile, upholstery, and commercial cleaning from ServiceMaster of the Desert in Palm Desert, CA.",
+    "Frequently asked questions about carpet, tile, upholstery, commercial floor care, and solar panel cleaning from ServiceMaster of the Desert in Palm Desert, CA.",
   alternates: { canonical: `${SITE_URL}/faq` },
   openGraph: {
     title: "FAQ | ServiceMaster of the Desert",
@@ -41,45 +43,47 @@ export default function FaqPage() {
           </p>
         </header>
 
-        <section aria-labelledby="residential-faq">
+        <nav
+          aria-label="FAQ sections"
+          className="mb-10 flex flex-wrap justify-center gap-3"
+        >
+          <a href="#residential" className="btn-secondary px-5 py-2 text-sm">
+            Residential FAQs
+          </a>
+          <a href="#commercial" className="btn-secondary px-5 py-2 text-sm">
+            Commercial FAQs
+          </a>
+        </nav>
+
+        <section id="residential" className="scroll-mt-24" aria-labelledby="residential-faq">
           <h2 id="residential-faq" className="mb-6 text-2xl font-bold text-charcoal">
             Residential Cleaning Questions
           </h2>
-          <dl className="space-y-6">
-            {residential.map((faq) => (
-              <div key={faq.question} className="rounded-lg border border-desert-sand p-5">
-                <dt className="text-lg font-semibold text-charcoal">{faq.question}</dt>
-                <dd className="mt-2 text-warm-gray">{faq.answer}</dd>
-              </div>
-            ))}
-          </dl>
+          <FaqAccordion items={residential} />
         </section>
 
-        <section aria-labelledby="commercial-faq" className="mt-12">
+        <section
+          id="commercial"
+          className="mt-12 scroll-mt-24"
+          aria-labelledby="commercial-faq"
+        >
           <h2 id="commercial-faq" className="mb-6 text-2xl font-bold text-charcoal">
             Commercial Cleaning Questions
           </h2>
-          <dl className="space-y-6">
-            {commercial.map((faq) => (
-              <div key={faq.question} className="rounded-lg border border-desert-sand p-5">
-                <dt className="text-lg font-semibold text-charcoal">{faq.question}</dt>
-                <dd className="mt-2 text-warm-gray">{faq.answer}</dd>
-              </div>
-            ))}
-          </dl>
+          <FaqAccordion items={commercial} />
         </section>
 
         <section className="mt-12 rounded-xl bg-brand-blue p-8 text-center text-white">
           <h2 className="text-xl font-bold">Still have questions?</h2>
           <p className="mt-2 text-white/85">
-            Call ServiceMaster of the Desert for a free estimate or to schedule service.
+            Book online or call ServiceMaster of the Desert for a free estimate.
           </p>
-          <a
-            href={PHONE_LINK}
-            className="btn-primary mt-4 inline-block"
-          >
-            Call (442) 227-3064
-          </a>
+          <div className="mt-4 flex flex-wrap justify-center gap-4">
+            <BookNowLink className="btn-primary px-8 py-3">Book Online</BookNowLink>
+            <a href="tel:+14422273064" className="rounded-[10px] border border-white px-8 py-3 font-semibold hover:bg-white/10">
+              Call (442) 227-3064
+            </a>
+          </div>
         </section>
       </article>
     </>

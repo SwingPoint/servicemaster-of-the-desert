@@ -1,5 +1,6 @@
 import businessesData from "./businesses.json";
-
+export type { FaqItem } from "./faqs-expanded";
+export { FAQS } from "./faqs-expanded";
 export type Business = (typeof businessesData)[number];
 const businesses = businessesData;
 
@@ -30,6 +31,7 @@ export const IMAGES = {
   upholstery: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f459d4d3107fdd0b893f62_professional-upholstery-cleaning-p-800.webp",
   window: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896569ce5c2dce6d3a01_window%20clean%20squegee.webp",
   pressure: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f45fe40256421dc0535f4a_pressure-washing-p-800.webp",
+  solar: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f45fe40256421dc0535f4a_pressure-washing-p-1080.webp",
   van: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f83bdd754def74795fb910_servicemaster-of-the-clean-van-p-1080.webp",
   owners: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f3631ea3b9334e5b179ff5_steve-and-lesli-servicemaster.webp",
   thermalClub: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f463d54acc8a860c6ee387_thermal-club-logo.webp",
@@ -89,72 +91,75 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-export type FaqItem = {
-  question: string;
-  answer: string;
-  category: "residential" | "commercial";
+export type GalleryCategory =
+  | "Carpet"
+  | "Tile & Stone"
+  | "Upholstery"
+  | "Exterior"
+  | "Solar"
+  | "Commercial";
+
+export type GalleryItem = {
+  title: string;
+  category: GalleryCategory;
+  image: string;
+  alt: string;
 };
 
-export const FAQS: FaqItem[] = [
+export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    category: "residential",
-    question: "How often do I need to get my carpets professionally cleaned?",
-    answer:
-      "To keep your carpets in your home looking their best, we recommend having your carpets professionally cleaned every 6–12 months, depending on traffic. Many carpet manufacturers require professional cleaning to maintain your warranty.",
+    title: "Residential carpet restoration",
+    category: "Carpet",
+    image: IMAGES.hero,
+    alt: "Professional carpet cleaning in a Palm Desert home",
   },
   {
-    category: "residential",
-    question: "When will I be able to walk on my floors after a carpet cleaning?",
-    answer:
-      "Allow a drying time of 6–8 hours before you walk on your carpet. It is best to wait two days before placing heavy furniture back onto the carpet if blocks are not used.",
+    title: "Truck-mounted carpet cleaning",
+    category: "Carpet",
+    image: IMAGES.residentialCarpet,
+    alt: "Residential carpet cleaning equipment in use",
   },
   {
-    category: "residential",
-    question: "Why should I get my tile and grout professionally cleaned?",
-    answer:
-      "Regular mopping only removes surface soil and not the embedded dirt that causes the grout to look unattractive. Professional cleaning restores the look of your tile and grout and extends its life.",
+    title: "Commercial carpet care",
+    category: "Commercial",
+    image: IMAGES.commercialCarpet,
+    alt: "Commercial carpets after cleaning in Palm Desert",
   },
   {
-    category: "residential",
-    question: "Is professional carpet cleaning expensive?",
-    answer:
-      "Professional carpet cleaning can cost just pennies compared to the cost of replacing carpet. Call today to get an estimate from one of our professionals.",
+    title: "Natural stone floor care",
+    category: "Tile & Stone",
+    image: IMAGES.naturalStone,
+    alt: "Natural stone floor cleaning in Palm Desert",
   },
   {
-    category: "residential",
-    question: "Will carpet cleaning be disruptive to my family?",
-    answer:
-      "The team at ServiceMaster will work with you to schedule a time that is convenient for you. Our technician will inform you of the estimated dry times needed.",
+    title: "Upholstery refresh",
+    category: "Upholstery",
+    image: IMAGES.upholstery,
+    alt: "Professional upholstery cleaning service",
   },
   {
-    category: "residential",
-    question: "Do I need to do anything prior to the technician arriving?",
-    answer:
-      "Remove breakables from the tops of furniture in the room we will be cleaning. Pick up items from the floor such as rugs, plants, and toys. Pre-vacuum all areas to be cleaned.",
+    title: "Window cleaning detail",
+    category: "Exterior",
+    image: IMAGES.window,
+    alt: "Window cleaning with squeegee in Palm Desert",
   },
   {
-    category: "residential",
-    question: "Why should I get upholstered furniture cleaned?",
-    answer:
-      "Having upholstered furniture professionally cleaned eliminates odors, removes spots, and extends its life.",
+    title: "Driveway pressure washing",
+    category: "Exterior",
+    image: IMAGES.pressure,
+    alt: "Pressure washing a desert home driveway",
   },
   {
-    category: "commercial",
-    question: "Will carpet cleaning be disruptive to my business?",
-    answer:
-      "The team at ServiceMaster will work with you to schedule a time after hours, or we can develop a customized program to clean your carpets in sections. Our technician will inform you of the estimated dry times needed.",
+    title: "Solar panel cleaning",
+    category: "Solar",
+    image: IMAGES.solar,
+    alt: "Solar panel cleaning to restore system efficiency",
   },
   {
-    category: "commercial",
-    question: "How often do I need to get my carpets professionally cleaned at my business?",
-    answer:
-      "We recommend setting up your business on a carpet care program with quarterly low-moisture cleaning to remove soil before it gets ground into carpet fibers. You may only need a professional deep cleaning once a year.",
-  },
-  {
-    category: "commercial",
-    question: "Is professional tile and grout cleaning expensive?",
-    answer:
-      "Professional tile and grout cleaning can cost just pennies compared to the cost of replacing tile. Call today to get an estimate from one of our professionals.",
+    title: "ServiceMaster service van",
+    category: "Commercial",
+    image: IMAGES.van,
+    alt: "ServiceMaster of the Desert van at a client property",
   },
 ];
 
@@ -180,21 +185,26 @@ export const TRUST_POINTS = [
 ];
 
 export const SERVICE_LINKS = [
-  { label: "Carpet Cleaning", href: "#carpet-cleaning" },
-  { label: "Tile and Grout Cleaning", href: "#tile-stone" },
-  { label: "Natural Stone Cleaning", href: "#tile-stone" },
-  { label: "Upholstery Cleaning", href: "#upholstery" },
-  { label: "Window and Exterior Cleaning", href: "#exterior" },
+  { label: "Carpet Cleaning", href: "/#carpet-cleaning" },
+  { label: "Tile and Grout Cleaning", href: "/#tile-stone" },
+  { label: "Natural Stone Cleaning", href: "/#tile-stone" },
+  { label: "Upholstery Cleaning", href: "/#upholstery" },
+  { label: "Window and Exterior Cleaning", href: "/#exterior" },
+  { label: "Solar Panel Cleaning", href: "/#solar-cleaning" },
 ];
 
 export const NAV_LINKS = [
-  { label: "Reviews", href: "/#reviews" },
-  { label: "Our Work", href: "/#services" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Our Work", href: "/our-work" },
   { label: "FAQ's", href: "/faq" },
   { label: "About Us", href: "/about-us" },
 ];
 
 export const AUTHORITY_LINKS = [
+  {
+    label: "Facebook Reviews",
+    href: "https://www.facebook.com/servicemaster.desert",
+  },
   {
     label: "ServiceMaster (national brand)",
     href: "https://www.servicemaster.com/",

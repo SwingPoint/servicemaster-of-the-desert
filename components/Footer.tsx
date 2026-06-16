@@ -48,12 +48,12 @@ export default function Footer() {
             <h2 className="mb-4 text-lg font-semibold text-white">Company</h2>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#reviews" className="hover:text-white">
+                <Link href="/reviews" className="hover:text-white">
                   Reviews
                 </Link>
               </li>
               <li>
-                <Link href="/#services" className="hover:text-white">
+                <Link href="/our-work" className="hover:text-white">
                   Our Work
                 </Link>
               </li>
