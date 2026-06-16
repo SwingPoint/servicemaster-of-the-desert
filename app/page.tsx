@@ -352,7 +352,7 @@ export default function HomePage() {
             ],
             cta: "Boost My Solar Efficiency",
             image: IMAGES.solar,
-            imageAlt: "Solar panel cleaning service in Palm Desert, CA",
+            imageAlt: "Clean solar panels reflecting the sky after professional cleaning in Palm Desert, CA",
           },
         ]}
       />

@@ -31,7 +31,7 @@ export const IMAGES = {
   upholstery: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f459d4d3107fdd0b893f62_professional-upholstery-cleaning-p-800.webp",
   window: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896569ce5c2dce6d3a01_window%20clean%20squegee.webp",
   pressure: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f45fe40256421dc0535f4a_pressure-washing-p-800.webp",
-  solar: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f45fe40256421dc0535f4a_pressure-washing-p-1080.webp",
+  solar: "/images/solar-panels.png",
   van: "/images/hero-van.png",
   owners: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f3631ea3b9334e5b179ff5_steve-and-lesli-servicemaster.webp",
   thermalClub: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f463d54acc8a860c6ee387_thermal-club-logo.webp",
@@ -153,7 +153,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Solar panel cleaning",
     category: "Solar",
     image: IMAGES.solar,
-    alt: "Solar panel cleaning to restore system efficiency",
+    alt: "Clean solar panels after professional cleaning in the Coachella Valley",
   },
   {
     title: "ServiceMaster service van",
