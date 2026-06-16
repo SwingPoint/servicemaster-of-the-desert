@@ -169,7 +169,7 @@ export default function HomePage() {
             ],
             cta: "Transform My Carpets",
             image: IMAGES.residentialCarpet,
-            imageAlt: "Carpet cleaning wand with ServiceMaster of the Desert logo",
+            imageAlt: "Freshly cleaned residential carpet with visible grooming lines in a Palm Desert living room",
           },
           {
             heading: "Commercial Carpet Cleaning Services",

@@ -24,7 +24,7 @@ export const IMAGES = {
   logo: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f35985d3f2415a16ad2e44_servicemaster-logo.webp",
   hero: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44d7eeb38050d0f7ecde8_professional-carpet-cleaning-palm-desert-p-1080.webp",
   heroTruck: "/images/hero-van.png",
-  residentialCarpet: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896521834bc915131795_gekko%20tool-p-800.webp",
+  residentialCarpet: "/images/residential-carpet.png",
   commercialCarpet: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44e053add29cae90a79d2_commercial-carpets-after-cleaning-palm-desert-p-800.webp",
   tileGrout: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
   naturalStone: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
@@ -117,7 +117,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: "Truck-mounted carpet cleaning",
     category: "Carpet",
     image: IMAGES.residentialCarpet,
-    alt: "Residential carpet cleaning equipment in use",
+    alt: "Freshly cleaned residential carpet in a Coachella Valley home",
   },
   {
     title: "Commercial carpet care",
