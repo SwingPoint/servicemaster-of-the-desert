@@ -25,24 +25,24 @@ const serviceCards = [
 ];
 
 export default function HomePage() {
-  const heroTestimonials = TESTIMONIALS.slice(0, 3);
-
   return (
     <>
       <JsonLd data={buildLocalBusinessJsonLd(business)} />
       <JsonLd data={buildFaqPageJsonLd()} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white">
+      <section className="relative overflow-hidden bg-desert-sand">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-16 lg:grid-cols-2 lg:px-6 lg:py-24">
           <div>
-            <h1 className="text-4xl font-bold leading-tight lg:text-5xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-warm-gray">
               Professional Carpet Cleaning in Palm Desert, CA
-            </h1>
-            <p className="mt-4 text-xl text-white/90">
-              The clean you expect, the service you deserve.
             </p>
-            <p className="mt-4 leading-relaxed text-white/80">
+            <h1 className="mt-4 text-4xl font-bold leading-tight text-charcoal lg:text-5xl">
+              The clean{" "}
+              <span className="text-brand-blue">you expect</span>, the service{" "}
+              <span className="text-brand-blue">you deserve.</span>
+            </h1>
+            <p className="mt-6 leading-relaxed text-warm-gray">
               With over 30 years of trusted service in the Coachella Valley,
               ServiceMaster of the Desert is your go-to for unparalleled
               cleanliness. Our dedicated team specializes in carpet, furniture,
@@ -56,25 +56,33 @@ export default function HomePage() {
               Clean My Space
             </a>
           </div>
-          <div>
-            <Image
-              src={IMAGES.heroTruck}
-              alt="ServiceMaster of the Desert truck at a Palm Desert residence"
-              width={1080}
-              height={720}
-              priority
-              className="rounded-xl shadow-2xl"
-            />
+          <div className="mx-auto w-full max-w-md lg:max-w-none">
+            <div className="aspect-square overflow-hidden rounded-full shadow-xl">
+              <Image
+                src={IMAGES.heroTruck}
+                alt="ServiceMaster of the Desert truck at a Palm Desert residence"
+                width={1080}
+                height={1080}
+                priority
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Hero testimonials */}
-      <section className="bg-off-white py-12" id="reviews">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-3 lg:px-6">
-          {heroTestimonials.map((t) => (
-            <TestimonialCard key={t.author} testimonial={t} />
-          ))}
+      <section className="bg-brand-blue py-14 text-white" id="reviews">
+        <div className="mx-auto max-w-3xl px-4 text-center lg:px-6">
+          <ReviewStars className="mb-6 justify-center" />
+          <blockquote>
+            <p className="font-heading text-xl leading-relaxed lg:text-2xl">
+              &ldquo;{TESTIMONIALS[0].quote}&rdquo;
+            </p>
+            <footer className="mt-6 text-sm font-medium text-white/90">
+              {TESTIMONIALS[0].author}, via {TESTIMONIALS[0].source}
+            </footer>
+          </blockquote>
         </div>
       </section>
 
