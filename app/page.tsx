@@ -238,7 +238,7 @@ export default function HomePage() {
             ],
             cta: "Refresh My Tiles",
             image: IMAGES.tileGrout,
-            imageAlt: "Residential tile cleaning in Palm Desert, CA",
+            imageAlt: "Polished tile and grout floor after professional cleaning in Palm Desert, CA",
           },
           {
             heading: "Natural Stone Cleaning",

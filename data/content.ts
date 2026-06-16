@@ -28,7 +28,7 @@ export const IMAGES = {
   truckMountedTile:
     "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896521834bc915131795_gekko%20tool-p-800.webp",
   commercialCarpet: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f44e053add29cae90a79d2_commercial-carpets-after-cleaning-palm-desert-p-800.webp",
-  tileGrout: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
+  tileGrout: "/images/tile-grout.png",
   naturalStone: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f4592e4aa7d25dd71d1a17_natural-stone-floor.webp",
   upholstery: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/65f459d4d3107fdd0b893f62_professional-upholstery-cleaning-p-800.webp",
   window: "https://cdn.prod.website-files.com/65f356ec7415593fe8a16928/6629896569ce5c2dce6d3a01_window%20clean%20squegee.webp",
